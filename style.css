@@ -287,12 +287,17 @@ hr {
 .navigation-bar {
   width: 300px;
   height: 100vh;
-  background-color: #24afb5;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0),
+    rgb(73, 194, 178)
+  );
   color: white;
   position: fixed;
   right: -300px;
   top: 0;
   transition: 1s;
+  padding-top: 100px;
 }
 .add-nav {
   right: 0;
@@ -301,7 +306,63 @@ hr {
 h3 {
   padding: 30px;
   font-size: 20px;
-  cursor: ;
+  cursor: pointer;
+}
+.sub-nav:first-child {
+  width: 100%;
+  height: 45px;
+  font-size: 28px;
+  padding: 20px;
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-delay: 0.2s;
+}
+.sub-nav:nth-child(2) {
+  width: 100%;
+  height: 45px;
+  font-size: 28px;
+  padding: 20px;
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-delay: 0.4s;
+}
+.sub-nav:nth-child(3) {
+  width: 100%;
+  height: 45px;
+  font-size: 28px;
+  padding: 20px;
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-delay: 0.6s;
+}
+.sub-nav:nth-child(4) {
+  width: 100%;
+  height: 45px;
+  font-size: 28px;
+  padding: 20px;
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-delay: 0.8s;
+}
+.sub-nav:nth-child(5) {
+  width: 100%;
+  height: 45px;
+  font-size: 28px;
+  padding: 20px;
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-delay: 1s;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1000px) {

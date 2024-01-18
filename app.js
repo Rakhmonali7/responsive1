@@ -1,19 +1,21 @@
 "use strict";
-// function toglerMenu() {
-//   const menu = document.querySelector(".togler");
-//   menu.classList.toggle("togler-open");
-// }
-// const btn = document.querySelector(".info-img");
-// btn.addEventListener("click", function () {
-//   toglerMenu();
-// });
+function removeElement(nums, val) {
+  let k = 0; // Represents the count of elements not equal to val
 
-const btn = document.querySelector(".info-img");
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[k] = nums[i];
+      k++;
+    }
+  }
 
-function togler() {
-  const bar = document.querySelector(".navigation-bar");
-  bar.classList.toggle("add-nav");
+  return k;
 }
-btn.addEventListener("click", function () {
-  togler();
-});
+
+// Example usage:
+let nums = [3, 2, 2, 3];
+let val = 3;
+let result = removeElement(nums, val);
+
+console.log(result); // Output: 2
+console.log(nums.slice(0, result)); // Elements not equal to val: [2, 2]
